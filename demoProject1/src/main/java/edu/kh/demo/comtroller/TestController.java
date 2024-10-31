@@ -40,18 +40,18 @@ public class TestController {
 	// ex) /todo/insert, 	todo/select, 	/todo/update .. 
 
 	/*@RequestMapping("/todo")
+	 * public class 클래스명 {
 	 * 
 		@RequestMapping("/insert") // todo/insert 매핑
 		public String 메서드명() {}
 		
 		@RequestMapping("/select") // todo/select 매핑
 		public String 메서드명() {}
-		public String 메서드명() {}
 		
 		@RequestMapping("/update") // todo/update 매핑
 		public String 메서드명() {}
-		public String 메서드명() {}
-		
+	
+	}
 		*/
 	
 	@RequestMapping("/test") // /test 요청 시 처리할 메서드 매핑
