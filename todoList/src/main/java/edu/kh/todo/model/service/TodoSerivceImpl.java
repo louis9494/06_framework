@@ -72,6 +72,18 @@ public class TodoSerivceImpl implements TodoService{
 		return mapper.addTodo(todo);
 	}
 	
+	// 할 일 상세조회
+	@Override
+	public Todo todoDetail(int todoNo) {
+		return mapper.todoDetail(todoNo);
+	}
+
+	@Override
+	public int changeComplete(Todo todo) {
+		// TODO Auto-generated method stub
+		return mapper.changeComplete(todo);
+	}
+	
 	
 	
 }

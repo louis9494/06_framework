@@ -41,7 +41,7 @@ import com.zaxxer.hikari.HikariDataSource;
  * */
 
 @Configuration
-@PropertySource("classpath:/config.properties")
+@PropertySource("classpath:/config.properties") // properties 안에 사용하겠다
 public class DBConfig {
 	
 	
@@ -61,8 +61,9 @@ public class DBConfig {
 	// 메서드
 	
 	///////////////////// hikariCP 설정 ///////////////////////
-	@Bean // Bean으로 등록
-	@ConfigurationProperties(prefix = "spring.datasource.hikari") // 설정 객체를 이 내용으로 만듬 -> 읽어온 내용을 가지고 생성
+	@Bean // Bean(빈)으로 등록
+	@ConfigurationProperties(prefix = "spring.datasource.hikari") //spring.datasource.hikari-> 접두사,
+	//설정 객체를 이 내용으로 만듬 -> 읽어온 내용을 가지고 생성
 	public HikariConfig hikariConfig() {// HikariConfig객체를 만듬
 		
 		
@@ -70,7 +71,7 @@ public class DBConfig {
 		// spring.datasource.hikari로 시작하는 모든 값이
 		// 자동으로 알맞은 필드에 세팅됨
 		
-		return new HikariConfig(); // 반환형	
+		return new HikariConfig(); // 반환형 -> 개발자가 직접만든 객체 -> 빈으로 등록
 	}
 	
 	

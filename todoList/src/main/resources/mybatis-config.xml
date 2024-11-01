@@ -3,7 +3,7 @@
 <configuration>
 
 	<settings>
-		<!-- Java -> DB로 INSERT/UPDATE 시 Java의 null 값을 DB의 NULL로 인식하도록 설정 -->
+		<!-- Java -> DB로 INSERT/UPDATE 시 Java의 null 값을 DB의 NULL로 인식하도록 설정 (안쓰면 에러뜸) -->
 		<setting name="jdbcTypeForNull" value="NULL" /> 
 		
 		<!--  DB의 UnderScore(_) 표기법 <-> Java의 Camel 표기법이 서로 변환될수 있도록 매핑하여
